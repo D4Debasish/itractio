@@ -1,19 +1,23 @@
+import React from "react";
 import Creators from "@/components/Creators";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import FloatingSection from "@/components/FloatingSection";
-import MainContent from "@/components/MainContent";
+import Alphahero from "@/components/Alphahero";
+import Narrative from "@/components/Narrative";
+import Recomemded from "@/components/Recomemded";
 
-export default function Home() {
+const page = () => {
   return (
     <main className="items-center  ">
       <div className="items-center  flex flex-col">
         <Header />
-        <Hero />
-        <MainContent />
-        <div className="bg-white/20 h-px w-full mt-20 mb-6"></div>
+        <Alphahero />
+        <Narrative />
+        <Recomemded />
+        <div className="bg-white/20 h-px w-full mt-6 mb-6"></div>
         <Creators />
         <div className="bg-white/20 h-px w-full mt-20 mb-6"></div>
         <Footer />
@@ -21,4 +25,6 @@ export default function Home() {
       <FloatingSection />
     </main>
   );
-}
+};
+
+export default page;
